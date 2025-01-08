@@ -7,9 +7,17 @@ const {default: meData } = await import('../assets/me.json');
 
 <Layout>
 	<h1>{meData.nombre}</h1>
-	<h2>{meData.apellidos}</h2>
 	<h2>{meData.profesion}</h2>
-	<h2>{meData.descripcion}</h2>
-	<h2>{meData.estudios}</h2>
-	<h2>{meData.experiencia}</h2>
+	<h2>{meData.bio}</h2>
+	<h2>experiencia</h2>
+	{meData.experiencia.map((exp)=>(
+	<p>{exp.nombre}</p>
+	<p>{exp.descripcion}</p>
+	<p>{exp.fecha}</p>
+	))}
+
+	<h2>habilidades</h2>
+	{meData.habilidades.map((habilidad)=>(
+		<p>{habilidad}</p>
+		))}
 </Layout>
