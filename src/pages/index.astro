@@ -3,21 +3,41 @@ import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import '../assets/me.json';
 const {default: meData } = await import('../assets/me.json');
+
 ---
 
 <Layout>
-	<h1>{meData.nombre}</h1>
-	<h2>{meData.profesion}</h2>
-	<h2>{meData.bio}</h2>
-	<h2>experiencia</h2>
-	{meData.experiencia.map((exp)=>(
-	<p>{exp.nombre}</p>
-	<p>{exp.descripcion}</p>
-	<p>{exp.fecha}</p>
-	))}
 
-	<h2>habilidades</h2>
+<section class="hero">
+	<section>
+	<h1 class="nombre">{meData.nombre}</h1>
+	<h2 class = "profesion">{meData.profesion}</h2>
+	<h2 class = "biografia">{meData.bio}</h2>
+	</section>
+</section>
+
+	<section>
+	<h2>Experiencia:</h2>
+	{meData.experiencia.map((exp)=>(
+		<article class = "experiencia">
+	<p class = "exp-empresa">{exp.nombre}</p>
+	<p class = "exp-descripcion">{exp.descripcion}</p>
+	<p class = "exp-fecha">{exp.fecha}</p>
+</article>
+	))}
+</section>
+
+
+<section>
+	<h2>Habilidades:</h2>
+	<div class ="envoltura-habilidades">
 	{meData.habilidades.map((habilidad)=>(
+		<article class = "habilidades">
 		<p>{habilidad}</p>
+	</article>
 		))}
+		</div>
+		</section>
+
+
 </Layout>
