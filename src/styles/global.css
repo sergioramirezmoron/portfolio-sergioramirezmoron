@@ -5,6 +5,7 @@ html {
 
 section{
     max-width: 900px;
+    margin-top: 84px;
     margin-right: auto;
     margin-left: auto;
     white-space: nowrap
@@ -76,3 +77,24 @@ section{
     height: 40vh;
     border-radius: 32px;
 }
+
+.enlace-proyecto {
+    text-decoration: none;
+    color: rgb(0,0,0);
+}
+
+.enlace-proyecto:hover {
+    color: rgb(0, 0, 0);
+}
+
+.proyecto {
+    padding: 16px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.proyecto:hover{
+    background-color: rgb(206, 206, 206);
+}
+

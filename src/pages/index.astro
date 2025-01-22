@@ -1,22 +1,35 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
 import '../assets/me.json';
+import Footer from '../components/Footer.astro';
 const {default: meData } = await import('../assets/me.json');
-
+const projects = await Astro.glob<any>("../pages/projects/*.md")
+	console.log(projects);
 ---
 
 <Layout>
-
-<section class="hero">
+<Header />
+<section id="inicio" class="hero">
 	<section>
 	<h1 class="nombre">{meData.nombre}</h1>
 	<h2 class = "profesion">{meData.profesion}</h2>
 	<h2 class = "biografia">{meData.bio}</h2>
 	</section>
 </section>
-
-	<section>
+<section id="proyectos">
+	<h2>Proyectos</h2>
+	
+	{projects.map((project)=> (
+		<a href={project.url} class="enlace-proyecto">
+		<article class="proyecto">
+			<h3>{project.frontmatter.title}</h3>
+			<p>{project.frontmatter.description}</p>
+		</article>
+		</a>
+	))}
+</section>
+	<section id="experiencia">
 	<h2>Experiencia:</h2>
 	{meData.experiencia.map((exp)=>(
 		<article class = "experiencia">
@@ -28,7 +41,7 @@ const {default: meData } = await import('../assets/me.json');
 </section>
 
 
-<section>
+<section id="habilidades">
 	<h2>Habilidades:</h2>
 	<div class ="envoltura-habilidades">
 	{meData.habilidades.map((habilidad)=>(
@@ -39,5 +52,5 @@ const {default: meData } = await import('../assets/me.json');
 		</div>
 		</section>
 
-
+<Footer />
 </Layout>
