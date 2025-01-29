@@ -1,19 +1,13 @@
 {
     "nombre": "Sergio Ramirez Morón",
-    "profesion": "Estudiante de Desarrollo de Aplicaciones Web",
-    "bio": "Apasionado por la inteligencia artificial y el desarrollo web y multiplataforma.",
+    "profesion": "Actual estudiante de Desarrollo de Aplicaciones Web",
+    "bio": "Apasionado por la inteligencia artificial y el desarrollo web.",
     "experiencia": [
         {
             "nombre": "Ecoideas",
             "descripcion": "Premonitor y ayudante de tareas y actividades con infantes",
             "fecha": "2016 - 2022"
-    },
-    {
-        "nombre": "Ejemplo2",
-        "descripcion": "Ejemplo2",
-        "fecha": "Ejemplo2"
-}
+    }
     ],
     "habilidades": ["Liderazgo", "Cooperación", "Empatía", "Trabajo en equipo", "Comunicación efectiva", "Resolución de problemas", "Creatividad", "Pensamiento crítico", "Gestión del tiempo", "Adaptabilidad"]
-
 }

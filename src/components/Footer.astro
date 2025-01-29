@@ -1,36 +1,43 @@
 ---
-import Instagram from "./icons/instagram.astro";
-import Youtube from "./icons/youtube.astro";
-import Twitch from "./icons/twitch.astro";
+import Github from "./icons/Github.astro";
+import Instagram from "./icons/Instagram.astro";
+import Youtube from "./icons/Youtube.astro";
 ---
 <footer>
     <nav>
-        <li><a href=""><Instagram/a></li>
-            <li><a href=""><Youtube/a></li>
-            <li><a href=""><Twitch/a></li>
-            <li><a href=""></a></li>
+        <li><a href="https://www.instagram.com/sergiormrz06/profilecard/?igsh=OWZzYWJpdXJ2Mnlr"><Instagram /></a></li>
+        <li><a href="https://youtube.com/@sergiormrz06?si=J5Fr8_umTYvyFdFZ"><Youtube /></a></li>
+        <li><a href="https://github.com/sergioramirezmoron"><Github /></a></li>
     </nav>
-  
+
     <style>
       footer {
         width: 100%;
-        background-color: black;
-        color: white;
+        background-color: rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-radius: 16px;
       }
 
-  nav{
-    width: fit-content;
-padding: 16px;
-display: flex;
-flex-direction: row;
-gap: 16px;
-align-items: center;
-  }
+      nav {
+        width: fit-content;
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+      }
 
-  
-    
+      nav a {
+  color: black !important;
+}
+
+nav svg {
+  width: 32px;
+  height: 32px;
+  fill: black !important;
+}
     </style>
-  </footer>
+</footer>
